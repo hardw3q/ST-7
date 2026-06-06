@@ -22,7 +22,7 @@ public class IpAddressTask {
         System.out.println("Ваш IPv4-адрес: " + ip);
     }
 
-    static String extractIp(String json) throws ParseException {
+    public static String extractIp(String json) throws ParseException {
         JSONObject obj = (JSONObject) new JSONParser().parse(json);
         Object ip = obj.get("ip");
         if (ip == null) {

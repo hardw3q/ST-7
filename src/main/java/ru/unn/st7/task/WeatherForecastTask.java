@@ -42,7 +42,7 @@ public class WeatherForecastTask {
                 .toString();
     }
 
-    static String buildTable(String json) throws ParseException {
+    public static String buildTable(String json) throws ParseException {
         JSONObject obj = (JSONObject) new JSONParser().parse(json);
         JSONObject hourly = (JSONObject) obj.get("hourly");
         JSONArray times = (JSONArray) hourly.get("time");
